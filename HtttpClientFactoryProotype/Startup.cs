@@ -31,6 +31,15 @@ namespace HtttpClientFactoryProotype
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
+
+            //// Attempt to allow JS AJAX calls after a deployment occurs
+            //services.AddCors();
+
+            //services.AddCors(options =>
+            //{
+            //    options.AddPolicy("AllowSpecificOrigin",
+            //        builder => builder.WithOrigins(this.Configuration.GetSection("IdentityConfiguration")["PortalWebUrl"]).AllowAnyHeader().AllowAnyMethod());
+            //});
             // add routing services and understand what problem routing services solves 
 
             //// Add Tenant DB contexts //
