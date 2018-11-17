@@ -32,6 +32,10 @@ namespace HtttpClientFactoryProotype
             });
 
 
+            //// Add configuration services //
+            //services.AddSingleton(provider => this.Configuration);
+
+
             //services.AddAuthentication(options =>
             //{
 
