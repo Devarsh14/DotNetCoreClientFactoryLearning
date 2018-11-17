@@ -37,7 +37,8 @@ namespace HtttpClientFactoryProotype
             // Add document Db
             //services.AddSingleton<IDocumentClient>(x => new DocumentClient(new Uri($"https://cosmosdb-devarsh-au-{this.HostingEnvironment.EnvironmentName.ToLower().Substring(0, 3)}.documents.azure.com:443/"), this.Configuration.GetValue<string>("CosmosDbRoutingKey")));
 
-
+            //// Feature service
+            //services.AddFeatureToggle();
 
             //Bug: add Httpcclient confiugre and add json file.
             //services.AddHttpClient<PdfClient>(client => client.BaseAddress = new Uri(this.Configuration.GetSection("PdfConfiguration")["OversiPdfGeneratorHost"]));
