@@ -61,3 +61,29 @@ namespace HtttpClientFactoryProotype
         }
     }
 }
+
+
+
+//// This method gets called by the runtime.Use this method to configure the HTTP request pipeline.
+//        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
+//{
+//    // First up - HTTPS only
+//    app.UseHttpsRedirection();
+
+//    // Add a single debug logger
+//    loggerFactory.AddDebug();
+
+//    bool.TryParse(this.Configuration.GetSection("Logging").GetValue<string>("LocalMode"), out bool localMode);
+
+//    if (env.IsDevelopment() || localMode == true)
+//    {
+//        app.UseDeveloperExceptionPage();
+//        app.UseDatabaseErrorPage();
+//        //app.UseBrowserLink();
+//    }
+//    else
+//    {
+//        app.UseExceptionHandler("/Home/Error");
+//        app.UseHsts();
+//        loggerFactory.AddApplicationInsights(app.ApplicationServices, LogLevel.Information);
+//    }
