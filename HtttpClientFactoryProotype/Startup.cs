@@ -32,6 +32,28 @@ namespace HtttpClientFactoryProotype
             });
 
 
+
+            //// Add Tenant DB contexts //
+            //services.AddDbContext<DevarshDbContext>();
+            //services.AddDbContext<DevarshNoteDbContext>();
+            //services.AddDbContext<DevarshFileAttachmentDbContext>();
+            //services.AddDbContext<DevarshAuditDbContext>();
+
+            //services.AddEntityFrameworkSqlServer()
+            //    .AddDbContext<DevarshRefDbContext>(options =>
+            //    {
+            //        options.UseSqlServer(
+            //            this.Configuration.GetConnectionString("DevarshAppRefDbConnection"),
+            //            sqlServerOptionsAction: sqlOptions =>
+            //            {
+            //                sqlOptions.EnableRetryOnFailure(
+            //                    maxRetryCount: 5,
+            //                maxRetryDelay: TimeSpan.FromSeconds(30),
+            //                errorNumbersToAdd: null);
+            //            });
+            //    });
+
+
             // Large forms were not submitting with the defaul of 1024 objects //
             //services.Configure<FormOptions>(x => x.ValueCountLimit = 32768);
 
