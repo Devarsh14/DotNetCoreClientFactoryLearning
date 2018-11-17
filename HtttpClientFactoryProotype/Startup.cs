@@ -34,12 +34,20 @@ namespace HtttpClientFactoryProotype
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
+            //// Automapper (+ AutoMapper.Data to map SqlReaders to EF Models)
+            //services.AddAutoMapper(cfg =>
+            //{
+            //    //cfg.AddDataReaderMapping();
+            //    cfg.CreateMissingTypeMaps = true;
+            //});
+
+
             // Add document Db
             //services.AddSingleton<IDocumentClient>(x => new DocumentClient(new Uri($"https://cosmosdb-devarsh-au-{this.HostingEnvironment.EnvironmentName.ToLower().Substring(0, 3)}.documents.azure.com:443/"), this.Configuration.GetValue<string>("CosmosDbRoutingKey")));
 
             //// Feature service
             //services.AddFeatureToggle();
-            
+
             // Application insight telemetetry
             //services.AddApplicationInsightsTelemetry();
 
