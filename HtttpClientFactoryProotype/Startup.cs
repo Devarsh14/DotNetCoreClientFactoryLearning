@@ -31,6 +31,16 @@ namespace HtttpClientFactoryProotype
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
+
+
+            //// HSTS - https://blogs.msdn.microsoft.com/webdev/2018/02/27/asp-net-core-2-1-https-improvements/
+            //services.AddHsts(options =>
+            //{
+            //    options.MaxAge = TimeSpan.FromDays(100);
+            //    options.IncludeSubDomains = true;
+            //    options.Preload = true;
+            //});
+
             //JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
 
             //// Add configuration services //
