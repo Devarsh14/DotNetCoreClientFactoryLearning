@@ -39,6 +39,9 @@ namespace HtttpClientFactoryProotype
 
             //// Feature service
             //services.AddFeatureToggle();
+            
+            // Application insight telemetetry
+            //services.AddApplicationInsightsTelemetry();
 
             //Bug: add Httpcclient confiugre and add json file.
             //services.AddHttpClient<PdfClient>(client => client.BaseAddress = new Uri(this.Configuration.GetSection("PdfConfiguration")["OversiPdfGeneratorHost"]));
