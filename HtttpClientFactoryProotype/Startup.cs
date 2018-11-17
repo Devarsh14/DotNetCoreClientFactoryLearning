@@ -32,6 +32,17 @@ namespace HtttpClientFactoryProotype
             });
 
 
+            // Redis  // than learn mongo db
+
+            // Azure cahing look at https://docs.microsoft.com/en-us/azure/architecture/best-practices/caching
+            //services.AddSingleton<IAzureCacheStorage>(factory =>
+            //{
+            //    return new AzureCacheStorage(new AzureCacheSettings(
+            //        connectionString: cacheConnectiontString));
+            //});
+
+
+
             //// Make sessions expire after 10 mins //
             //services.AddSession(options =>
             //{
