@@ -10,6 +10,68 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
+
+
+//using System;
+//using System.Collections.Generic;
+//using System.Globalization;
+//using System.IdentityModel.Tokens.Jwt;
+//using System.Linq;
+//using System.Reflection;
+//using AutoMapper;
+//using DinkToPdf;
+//using DinkToPdf.Contracts;
+//using FluentValidation;
+//using FluentValidation.AspNetCore;
+//using Microsoft.AspNetCore.Authentication.Cookies;
+//using Microsoft.AspNetCore.Authentication.OpenIdConnect;
+//using Microsoft.AspNetCore.Authorization;
+//using Microsoft.AspNetCore.Builder;
+//using Microsoft.AspNetCore.Hosting;
+//// added for form size limits
+//using Microsoft.AspNetCore.Http.Features;
+//using Microsoft.AspNetCore.Localization;
+//using Microsoft.AspNetCore.Mvc.Authorization;
+//using Microsoft.AspNetCore.Mvc.Infrastructure;
+//using Microsoft.AspNetCore.Mvc.Razor;
+//using Microsoft.AspNetCore.Routing.Constraints;
+//using Microsoft.EntityFrameworkCore;
+//using Microsoft.Extensions.Configuration;
+//using Microsoft.Extensions.DependencyInjection;
+//using Microsoft.Extensions.Logging;
+//using Microsoft.IdentityModel.Tokens;
+//using NETCore.MailKit.Extensions;
+//using NETCore.MailKit.Infrastructure.Internal;
+//using Newtonsoft.Json;
+//// added these to prevent recursive loop issue
+//using Newtonsoft.Json.Serialization;
+//using OversiWeb.Areas.Actions.Services;
+//using OversiWeb.Areas.Risks.Models.RisksViewModels;
+//using OversiWeb.Authorizations;
+//using OversiWeb.Extensions;
+//using OversiWeb.Helpers;
+//using OversiWeb.Models;
+//using OversiWeb.Services;
+//using System.Security.Cryptography.X509Certificates;
+//using Microsoft.Azure.Services.AppAuthentication;
+//using Microsoft.AspNetCore.DataProtection;
+//using StackExchange.Redis;
+//using AutoMapper.Data;
+//using OversiWeb.TagHelpers;
+//using System.Data;
+//using Microsoft.AspNetCore.HttpOverrides;
+//using OversiWeb.Configuration;
+//using Microsoft.AspNetCore.Http;
+//using System.Threading.Tasks;
+//using Microsoft.AspNetCore.Authentication;
+//using Microsoft.Azure.KeyVault;
+//using OversiWeb.Areas.Contacts.Models.ContactsViewModels;
+//using OversiWeb.Data;
+//using OversiWeb.Cache;
+//using OversiWeb.HttpClients;
+//using Microsoft.Azure.Documents;
+//using Microsoft.Azure.Documents.Client;
+
 namespace HtttpClientFactoryProotype
 {
     public class Startup
