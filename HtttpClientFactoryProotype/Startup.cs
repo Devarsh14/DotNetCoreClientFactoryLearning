@@ -33,6 +33,15 @@ namespace HtttpClientFactoryProotype
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            // Add document Db
+            //services.AddSingleton<IDocumentClient>(x => new DocumentClient(new Uri($"https://cosmosdb-devarsh-au-{this.HostingEnvironment.EnvironmentName.ToLower().Substring(0, 3)}.documents.azure.com:443/"), this.Configuration.GetValue<string>("CosmosDbRoutingKey")));
+
+
+
+            //Bug: add Httpcclient confiugre and add json file.
+            //services.AddHttpClient<PdfClient>(client => client.BaseAddress = new Uri(this.Configuration.GetSection("PdfConfiguration")["OversiPdfGeneratorHost"]));
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
