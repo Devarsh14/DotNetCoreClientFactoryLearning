@@ -32,6 +32,9 @@ namespace HtttpClientFactoryProotype
             });
 
 
+            // Large forms were not submitting with the defaul of 1024 objects //
+            //services.Configure<FormOptions>(x => x.ValueCountLimit = 32768);
+
             //// Add messaging services
             //services.AddTransient<IEmailSender, AuthMessageSender>();
             //services.AddTransient<ISmsSender, AuthMessageSender>();
