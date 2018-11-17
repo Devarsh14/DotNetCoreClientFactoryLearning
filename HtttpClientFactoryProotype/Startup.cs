@@ -14,6 +14,38 @@ namespace HtttpClientFactoryProotype
 {
     public class Startup
     {
+
+        //public Startup(IHostingEnvironment env, IHttpContextAccessor httpContextAccessor)
+        //{
+        //    var builder = new ConfigurationBuilder()
+        //        .SetBasePath(env.ContentRootPath)
+        //        .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+        //        .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true);
+
+        //    if (env.IsDevelopment() || env.IsEnvironment("Integration"))
+        //    {
+        //        // For more details on using the user secret store see https://go.microsoft.com/fwlink/?LinkID=532709
+        //        // builder.AddUserSecrets<Startup>();
+        //    }
+
+        //    builder.AddEnvironmentVariables();
+
+        //    this.Configuration = builder.Build();
+
+        //    // Connect to KVS using MSI (needs config value for the vault)
+        //    builder.AddAzureKeyVault(Program.GetKeyVaultEndpoint(env.EnvironmentName));
+
+        //    // Rebuild the configuration
+        //    this.Configuration = builder.Build();
+
+        //    this.HttpContextAccessor = httpContextAccessor;
+        //    this.HostingEnvironment = env;
+        //}
+
+        //public IConfigurationRoot Configuration { get; }
+        //public IHttpContextAccessor HttpContextAccessor { get; }
+        //public IHostingEnvironment HostingEnvironment { get; set; }
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
