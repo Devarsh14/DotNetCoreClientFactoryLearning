@@ -32,6 +32,51 @@ namespace HtttpClientFactoryProotype
             });
 
 
+            //services.AddAuthentication(options =>
+            //{
+
+            //services.AddAuthentication(options =>
+            //{
+            //    options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+            //    options.DefaultChallengeScheme = OpenIdConnectDefaults.AuthenticationScheme;
+            //})
+            //    .AddCookie(options =>
+            //    {
+            //        options.Cookie.HttpOnly = true;
+            //        options.Cookie.Name = "OversiAppCookie";
+            //        options.AccessDeniedPath = new PathString("/Account/AccessDeniedNoRoute");
+            //        // This will be taken care of by Identity
+            //        options.Cookie.SameSite = Microsoft.AspNetCore.Http.SameSiteMode.None;
+            //    })
+            //    .AddJwtBearer()
+            //    .AddOpenIdConnect(options =>
+            //    {
+            //        options.RequireHttpsMetadata = this.HostingEnvironment.IsProduction();
+            //        options.GetClaimsFromUserInfoEndpoint = true;
+            //        options.SignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+
+            //        // Create a handler for the host/signin-oidc page
+            //        options.Events.OnRemoteFailure = this.RemoteAuthFail;
+
+            //        options.Authority = this.Configuration.GetSection("IdentityConfiguration")["OversiIdentityServerHost"];
+            //        options.ClientId = this.Configuration.GetSection("IdentityConfiguration")["ClientId"];
+            //        options.ClientSecret = this.Configuration.GetSection("IdentityConfiguration")["ClientSecret"];
+
+            //        options.ResponseType = "code id_token";
+            //        options.SaveTokens = true;
+
+            //        options.TokenValidationParameters = new TokenValidationParameters() { NameClaimType = "email" };
+            //        options.UseTokenLifetime = true;
+
+            //        options.Scope.Add("webappapi");
+            //        options.Scope.Add("offline_access");
+            //        options.Scope.Add("openid");
+            //        options.Scope.Add("email");
+            //        options.Scope.Add("profile");
+            //        options.Scope.Add("defaulttenant");
+            //        options.Scope.Add("allowedtenant");
+            //    });
+
             //// Attempt to allow JS AJAX calls after a deployment occurs
             //services.AddCors();
 
