@@ -32,7 +32,40 @@ namespace HtttpClientFactoryProotype
             });
 
 
+
+            // ------------ //
+            // LOCALISATION //
+            // ------------ //
+            //services.AddLocalization(options =>
+            //{
+            //    options.ResourcesPath = "Resources";
+            //});
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+
+
+            // Use serialisation settings fro MVC
+
+            //JSON serialisation //
+            //services.AddMvc(config =>
+            //{
+            //    var policy = new AuthorizationPolicyBuilder()
+            //                     .RequireAuthenticatedUser()
+            //                     .Build();
+            //    config.Filters.Add(new AuthorizeFilter(policy));
+            //}).AddJsonOptions(options =>
+            //{
+            //    options.SerializerSettings.ContractResolver = new DefaultContractResolver(); // Don't use Camel - it breaks Teleriks JSON response linking
+            //    options.SerializerSettings.PreserveReferencesHandling = PreserveReferencesHandling.Objects;
+            //    options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore; // .Ignore; // Allows Entity Framework to work without looking back up on itself
+            //    options.SerializerSettings.DateTimeZoneHandling = DateTimeZoneHandling.Utc; // Attempt at making datetime work
+            //})
+            //.AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix)
+            //.AddDataAnnotationsLocalization() // To dynamically name fields
+            //.AddControllersAsServices()
+            //.AddFluentValidation();
+
 
             //// Automapper (+ AutoMapper.Data to map SqlReaders to EF Models)
             //services.AddAutoMapper(cfg =>
