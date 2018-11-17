@@ -32,6 +32,14 @@ namespace HtttpClientFactoryProotype
             });
 
 
+            //// Make sessions expire after 10 mins //
+            //services.AddSession(options =>
+            //{
+            //    options.Cookie.HttpOnly = true;
+            //    options.Cookie.Name = ".ASPNetCoreSession";
+            //    options.Cookie.Path = "/";
+            //    options.IdleTimeout = TimeSpan.FromMinutes(599); // 1 minute less than Id token life
+            //});
 
             //// Define security policies here
             //services.AddAuthorization(options =>
