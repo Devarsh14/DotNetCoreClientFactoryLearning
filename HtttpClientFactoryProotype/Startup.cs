@@ -31,6 +31,7 @@ namespace HtttpClientFactoryProotype
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
+            //JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
 
             //// Add configuration services //
             //services.AddSingleton(provider => this.Configuration);
