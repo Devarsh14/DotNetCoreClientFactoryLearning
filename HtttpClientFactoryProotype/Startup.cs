@@ -31,7 +31,7 @@ namespace HtttpClientFactoryProotype
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-
+            // add routing services and understand what problem routing services solves 
 
             //// Add Tenant DB contexts //
             //services.AddDbContext<DevarshDbContext>();
