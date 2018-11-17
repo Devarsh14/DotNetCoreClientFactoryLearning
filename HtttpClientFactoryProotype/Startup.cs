@@ -32,7 +32,36 @@ namespace HtttpClientFactoryProotype
             });
 
 
+            //// Add messaging services
+            //services.AddTransient<IEmailSender, AuthMessageSender>();
+            //services.AddTransient<ISmsSender, AuthMessageSender>();
+            //services.AddSingleton<IMessageConfiguration>(this.Configuration.GetSection("MessageConfiguration").Get<MessageConfiguration>());
+
             // Redis  // than learn mongo db
+
+            // Add the cache and data protection keys
+            //bool.TryParse(this.Configuration.GetSection("Logging").GetValue<string>("LocalMode"), out bool localMode);
+            //string cacheConnectiontString = this.Configuration["RedisConnection"];
+            //if (localMode)
+            //{
+            //    cacheConnectiontString = "localhost";
+            //}
+
+            //services.AddDistributedRedisCache(options =>
+            //{
+            //    options.Configuration = "connectTimeout=10000,syncTimeout=10000," + cacheConnectiontString;
+            //    options.InstanceName = "master";
+            //});
+
+            //ConnectionMultiplexer redis = ConnectionMultiplexer.Connect("syncTimeout=5000," + cacheConnectiontString);
+
+            //AzureServiceTokenProvider azureServiceTokenProvider = new AzureServiceTokenProvider();
+            //KeyVaultClient keyVaultClient = new KeyVaultClient(new KeyVaultClient.AuthenticationCallback(azureServiceTokenProvider.KeyVaultTokenCallback));
+            //services.AddDataProtection()
+            //    .PersistKeysToRedis(redis, "DataProtection-Keys")
+            //    .ProtectKeysWithAzureKeyVault(keyVaultClient, $"https://KVS-Devarsh-{this.HostingEnvironment.EnvironmentName.ToUpper().Substring(0, 3)}.vault.azure.net/keys/AppDPKey")
+            //    .SetApplicationName("Devarsh");
+
 
             // Azure cahing look at https://docs.microsoft.com/en-us/azure/architecture/best-practices/caching
             //services.AddSingleton<IAzureCacheStorage>(factory =>
@@ -114,7 +143,7 @@ namespace HtttpClientFactoryProotype
             //services.AddApplicationInsightsTelemetry();
 
             //Bug: add Httpcclient confiugre and add json file.
-            //services.AddHttpClient<PdfClient>(client => client.BaseAddress = new Uri(this.Configuration.GetSection("PdfConfiguration")["OversiPdfGeneratorHost"]));
+            //services.AddHttpClient<PdfClient>(client => client.BaseAddress = new Uri(this.Configuration.GetSection("PdfConfiguration")["DevarshPdfGeneratorHost"]));
 
         }
 
