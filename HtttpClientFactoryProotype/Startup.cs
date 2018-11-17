@@ -33,6 +33,16 @@ namespace HtttpClientFactoryProotype
 
 
 
+            //// Define security policies here
+            //services.AddAuthorization(options =>
+            //{
+            //    foreach (var policyField in permissionFields)
+            //    {
+            //        options.AddPolicy((string)policyField.GetValue(null), policy => policy.Requirements.Add(new CustomAuthRequirement((string)policyField.GetValue(null))));
+            //    }
+            //});
+
+
             // ------------ //
             // LOCALISATION //
             // ------------ //
