@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.Runtime.Serialization.Json;
     using System.Net.Http.Headers;
-
+using Microsoft.Extensions.Logging;
 
 namespace HtttpClientFactoryProotype.HttpClients
 {
@@ -25,14 +25,20 @@ namespace HtttpClientFactoryProotype.HttpClients
     {
 
         private readonly HttpClient httpClient;
-
-        public ApiAppClient(HttpClient httpClient)
+        private readonly ILogger logger;
+        public ApiAppClient(HttpClient httpClient, ILogger<ApiAppClient> logger)
         {
             this.httpClient = httpClient;
+            this.logger = logger;
         }
 
         public async Task<IList<string>> GetValues()
         {
+            EventId eventId= new EventId(111,"New event");
+            this.logger.LogDebug(eventId,"Passed the message");
+            this.logger.LogError("Erorr ");
+
+            this.logger.LogError("Erorr ");
             //Rest client implementation in Detail
             //https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/console-webapiclient
             // TO get json result back and convert to desried object type follow tutoria
