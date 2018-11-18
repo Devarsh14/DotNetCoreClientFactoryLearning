@@ -5,14 +5,21 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using HtttpClientFactoryProotype.Models;
+using HtttpClientFactoryProotype.HttpClients;
 
 namespace HtttpClientFactoryProotype.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
+        private readonly IApiAppClient apiAppClient;
+        public HomeController(IApiAppClient apiAppClient)
         {
-            return View();
+            this.apiAppClient = apiAppClient;
+        }
+        public async Task<IActionResult> Index()
+        {
+            var strings=await this.apiAppClient.GetValues().ConfigureAwait(false);
+            return View(strings);
         }
 
         public IActionResult About()

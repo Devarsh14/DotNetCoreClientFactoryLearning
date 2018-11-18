@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using HtttpClientFactoryProotype.HttpClients;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -9,6 +10,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Http;
 
 
 
@@ -334,6 +336,10 @@ namespace HtttpClientFactoryProotype
 
             // Application insight telemetetry
             //services.AddApplicationInsightsTelemetry();
+
+            // Microsoft.extention ==> is important to understand what technologies are comming as DI or the new extentions are added. 
+
+            services.AddHttpClient<IApiAppClient, ApiAppClient>();
 
             //Bug: add Httpcclient confiugre and add json file.
             //services.AddHttpClient<PdfClient>(client => client.BaseAddress = new Uri(this.Configuration.GetSection("PdfConfiguration")["DevarshPdfGeneratorHost"]));
