@@ -355,6 +355,8 @@ namespace HtttpClientFactoryProotype
             loggerFactory.AddConsole(Configuration.GetSection("Logging")); // Log level is set in configuraiton file. YOu can set manully over here as weell.
                                                                            //Configuration.GetSection("Logging")
             loggerFactory.AddDebug(LogLevel.Trace);
+            loggerFactory.AddEventSourceLogger();
+            
             
 
             if (env.IsDevelopment())
