@@ -46,15 +46,16 @@ namespace HtttpClientFactoryProotype.HttpClients
             response2.EnsureSuccessStatusCode();
             var data = await this.httpClient.GetStreamAsync(httpClient.BaseAddress);
             IList<string> values = serializer.ReadObject(data) as List<string>;
-            
-            
+
+
             //var data = await response.Content.ReadAsStringAsync();
 
             //var response = await this.httpClient.GetStringAsync("api/PdfCreator/PostPdfBytes", pdfDto).ConfigureAwait(false
-            
+
             //var response = await this.httpClient.GetStreamAsync(httpClient.BaseAddress);
-          
-            //var repositories = serializer.ReadObject( response) as List<string>;
+
+            //var repositories = serializer.ReadObject( response) as List<string>; 
+            //https://github.com/Devarsh14/DotNetCoreClientFactoryLearning/projects/1#card-14929918
 
             //List<string> strings = data;
             return values;
