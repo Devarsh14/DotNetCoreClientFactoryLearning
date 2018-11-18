@@ -6,19 +6,25 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using HtttpClientFactoryProotype.Models;
 using HtttpClientFactoryProotype.HttpClients;
+using Microsoft.Extensions.Logging;
 
 namespace HtttpClientFactoryProotype.Controllers
 {
     public class HomeController : Controller
     {
         private readonly IApiAppClient apiAppClient;
-        public HomeController(IApiAppClient apiAppClient)
+        private readonly ILogger logger;
+        public HomeController(IApiAppClient apiAppClient, ILogger<HomeController> logger)
         {
             this.apiAppClient = apiAppClient;
+            this.logger = logger;
         }
         public async Task<IActionResult> Index()
         {
             var strings=await this.apiAppClient.GetValues().ConfigureAwait(false);
+            logger.LogInformation("output" + strings);
+
+            logger.LogDebug("Debuggig output log");
             return View(strings);
         }
 

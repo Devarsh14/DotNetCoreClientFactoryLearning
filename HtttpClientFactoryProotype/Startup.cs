@@ -11,6 +11,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Http;
+using Microsoft.Extensions.Logging;
 
 
 
@@ -344,11 +345,18 @@ namespace HtttpClientFactoryProotype
             //Bug: add Httpcclient confiugre and add json file.
             //services.AddHttpClient<PdfClient>(client => client.BaseAddress = new Uri(this.Configuration.GetSection("PdfConfiguration")["DevarshPdfGeneratorHost"]));
 
+            services.AddLogging();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env,ILoggerFactory loggerFactory)
         {
+            loggerFactory.AddConsole(Configuration.GetSection("Logging")); // Log level is set in configuraiton file. YOu can set manully over here as weell.
+                                                                           //Configuration.GetSection("Logging")
+            loggerFactory.AddDebug(LogLevel.Trace);
+            
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
