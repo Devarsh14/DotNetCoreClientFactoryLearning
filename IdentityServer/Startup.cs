@@ -33,6 +33,12 @@ namespace IdentityServer
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddIdentityServer()
+                .AddDeveloperSigningCredential()
+                .AddTestUsers(Config.GetUsers())
+                .AddInMemoryClients(Config.GetClients())
+                .AddInMemoryIdentityResources(Config.GetIdentityResources())
+                .AddInMemoryApiResources(Config.GetApiResources());
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -52,6 +58,7 @@ namespace IdentityServer
             app.UseStaticFiles();
             app.UseCookiePolicy();
 
+            app.UseIdentityServer();
             app.UseMvc(routes =>
             {
                 routes.MapRoute(

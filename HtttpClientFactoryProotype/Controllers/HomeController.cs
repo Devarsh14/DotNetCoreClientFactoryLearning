@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc;
 using HtttpClientFactoryProotype.Models;
 using HtttpClientFactoryProotype.HttpClients;
 using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Authentication;
 
 namespace HtttpClientFactoryProotype.Controllers
-{
+{      [Authorize]
     public class HomeController : Controller
     {
         private readonly IApiAppClient apiAppClient;
@@ -27,7 +29,10 @@ namespace HtttpClientFactoryProotype.Controllers
             logger.LogDebug("Debuggig output log");
             return View(strings);
         }
-
+        public async Task Logout()
+        {
+            await HttpContext.SignOutAsync("Cookies");
+        }
         public IActionResult About()
         {
             ViewData["Message"] = "Your application description page.";
